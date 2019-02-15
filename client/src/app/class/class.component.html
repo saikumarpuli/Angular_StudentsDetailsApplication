@@ -1,0 +1,18 @@
+<h2>{{student}} Details</h2>
+<table id="table">
+  <tr>
+    <td><b>id</b></td>
+    <td><b>name</b></td>
+    <td><b>phone</b></td>
+    <td><b>age</b></td>
+    <td><b>Select</b></td>
+  </tr>
+  <tr *ngFor="let index of data.student">
+    <td>{{index.id}}</td>
+    <td>{{index.name}}</td>
+    <td>{{index.phone}}</td>
+    <td>{{index.age}}</td>
+    <td><button (click)="Selectname(index)">{{index.name}} details</button></td>
+  </tr>
+</table>
+<app-user-details [parentData]="details"  ></app-user-details>
