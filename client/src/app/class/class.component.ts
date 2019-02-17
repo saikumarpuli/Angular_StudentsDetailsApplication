@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {split} from "ts-node";
 
 @Component({
   selector: 'app-class',
@@ -41,8 +42,7 @@ export class ClassComponent implements OnInit {
   Selectname(studentdata){
   this.details=studentdata;
   }
-
-
+ public position;
   ngOnInit() {
   }
 

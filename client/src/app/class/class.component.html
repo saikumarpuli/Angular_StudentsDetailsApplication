@@ -15,4 +15,6 @@
     <td><button (click)="Selectname(index)">{{index.name}} details</button></td>
   </tr>
 </table>
-<app-user-details [parentData]="details"  ></app-user-details>
+
+{{position}}
+<app-user-details [parentData]="details" (index)  =" position = $event"  ></app-user-details>
