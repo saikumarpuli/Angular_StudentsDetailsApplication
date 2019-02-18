@@ -43,7 +43,16 @@ export class ClassComponent implements OnInit {
   this.details=studentdata;
   }
  public position;
+  private i: number;
   ngOnInit() {
+  }
+  validateData(position : number){
+    this.position = position;
+    for(this.i=0; this.i<this.data.student.length; this.i++){
+      if(this.data.student[this.i].id==this.position){
+        this.data.student.splice(this.i,1)
+      }
+    }
   }
 
 }
