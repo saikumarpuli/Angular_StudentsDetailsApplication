@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ClassComponent } from './class/class.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { DataDisplayComponent } from './data-display/data-display.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClassComponent,
     UserDetailsComponent,
-    DataDisplayComponent
+    DataDisplayComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
