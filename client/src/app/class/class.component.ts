@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {split} from "ts-node";
+ import {JsondataService} from "../jsondata.service";
 
 @Component({
   selector: 'app-class',
@@ -8,61 +8,24 @@ import {split} from "ts-node";
 })
 export class ClassComponent implements OnInit {
 
-  constructor() { }
-  data = {
-    student: [
-      {
-        id: '01',
-        name: 'sai',
-        phone: '123456',
-        age: '24'
-      },
-      {
-        id: '02',
-        name: 'kumar',
-        phone: '234567',
-        age: '23'
-      },
-      {
-        id: '03',
-        name: 'puli',
-        phone: '345678',
-        age: '25'
-      },
-      {
-        id: '04',
-        name: 'sri',
-        phone: '456789',
-        age: '26'
-      },
-      {
-        id: '05',
-        name: 'dev',
-        phone: '456758',
-        age: '22'
-      },
-      {
-        id: '06',
-        name: 'saam',
-        phone: '455889',
-        age: '26'
-      }
-    ]
-  };
+  constructor(private jsonservice:JsondataService) { }
+
  public details:any;
   student = 'Students';
   Selectname(studentdata){
   this.details=studentdata;
   }
+  data;
  public position;
   private i: number;
   ngOnInit() {
+    this.data=this.jsonservice.getdata()
   }
   validateData(position : number){
     this.position = position;
-    for(this.i=0; this.i<this.data.student.length; this.i++){
-      if(this.data.student[this.i].id==this.position){
-        this.data.student.splice(this.i,1)
+    for(this.i=0; this.i<this.data.length; this.i++){
+      if(this.data[this.i].id==this.position){
+        this.data.splice(this.i,1)
       }
     }
   }
