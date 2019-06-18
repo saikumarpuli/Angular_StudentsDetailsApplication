@@ -7,6 +7,7 @@ import { ClassComponent } from './class/class.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { DataDisplayComponent } from './data-display/data-display.component';
 import { HomeComponent } from './home/home.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HomeComponent } from './home/home.component';
     ClassComponent,
     UserDetailsComponent,
     DataDisplayComponent,
-    HomeComponent
+    HomeComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

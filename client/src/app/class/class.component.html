@@ -15,6 +15,11 @@
     <td><button (click)="Selectname(index)">{{index.name}} details</button></td>
   </tr>
 </table>
-
 {{position}}
 <app-user-details [parentData]="details" (index)  =" position = validateData($event)"  ></app-user-details>
+
+<nav><p>click display to student details: </p>
+  <a routerLink="display" routerLinkActive="active" > display</a><br>
+  <p>click home to redirected to home: </p>
+  <a routerLink="home" routerLinkActive="active">home</a>
+</nav>

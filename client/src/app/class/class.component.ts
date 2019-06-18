@@ -33,7 +33,19 @@ export class ClassComponent implements OnInit {
         id: '04',
         name: 'sri',
         phone: '456789',
+        age: '26'
+      },
+      {
+        id: '05',
+        name: 'dev',
+        phone: '456758',
         age: '22'
+      },
+      {
+        id: '06',
+        name: 'saam',
+        phone: '455889',
+        age: '26'
       }
     ]
   };
